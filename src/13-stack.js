@@ -10,17 +10,20 @@
  * stack.pop(); // undefined
  *
  */
+const arr = [];
 class Stack {
-  push(/* element */) {
-    throw new Error('Not implemented');
+  push(element) {
+    arr.push(element);
   }
 
   pop() {
-    throw new Error('Not implemented');
+    const elem = arr[arr.length - 1];
+    arr.length -= 1;
+    return elem;
   }
 
   peek() {
-    throw new Error('Not implemented');
+    return arr[arr.length - 1];
   }
 }
 
